@@ -2,14 +2,14 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix: 
-        targets: [esp32s2, esp32s3]
+        targets: [esp32s2]
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
